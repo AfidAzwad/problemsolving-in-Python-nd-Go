@@ -1,18 +1,17 @@
-def bonAppetit(bill, k, b):
+def bonAppetit(bill, k, Billcharged):
     # Write your code here
-    bill = bill.remove(k)
-
+    del bill[k]
     total = 0
     
     for i in range(len(bill)):
         total += bill[i]
     
-    pay = int(total/2)
+    Billactual = int(total/2)
 
-    if pay == b:
+    if Billactual == Billcharged:
         print("Bon Appetit")
     else:
-        print(b-pay)
+        print("Brian owes Anna :",Billcharged-Billactual)
 
 
 
@@ -25,10 +24,8 @@ if __name__ == '__main__':
     k = int(first_multiple_input[1])
 
 
-    bill = list(map(int, input().rstrip().split()))
+    bill = list(map(int, input("Bills list :").rstrip().split()))
 
-    b = int(input().strip())
+    b = int(input("Brian bill charged Anna : ").strip())
     
-    print(n,k,b)
-
     bonAppetit(bill, k, b)
