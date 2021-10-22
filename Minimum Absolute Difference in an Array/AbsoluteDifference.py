@@ -1,28 +1,26 @@
 def minimumAbsoluteDifference(arr):
     # Write your code here
     diff = []
-    z = 1
     L = len(arr)
-
-    if len(arr) != len(list(set(arr))):  # checking duplicates to avoid unnecessary computations
+    
+    arr.sort()
+    
+    if len(arr) != len(list(set(arr))):
         return 0
     else:
-        for i in arr:
-            for j in range(z, L):
-                result = i - arr[j]
-                diff.append(abs(result))
-                if result == 0:  # to avoid unnecessary computations
-                    return min(diff)
-            z += 1
-        return min(diff)
+     for i in range(L-1):
+        result = arr[i+1] - arr[i]
+        diff.append(abs(result))
+        if result == 0:  # to avoid unnecessary computations
+            return min(diff)
+     return diff, min(diff)
 
 
 if __name__ == '__main__':
-    # n = int(input().strip())
+    n = int(input("n = ").strip())
 
-    # arr = list(map(int, input().rstrip().split()))
+    arr = list(map(int, input().rstrip().split()))
 
-    a = [5, 6, 7, 99, 77, 23, 33, 11]
-    result = minimumAbsoluteDifference(a)
+    result = minimumAbsoluteDifference(arr)
 
     print(result)
