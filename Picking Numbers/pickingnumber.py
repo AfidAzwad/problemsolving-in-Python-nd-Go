@@ -1,8 +1,11 @@
 def pickingNumbers(a):
-    # Write your code here
+      
+    print("Array : " ,a)
+
     a.sort()
-    
     multiset = []
+    
+    print("Sorted Array : " ,a)
     
     for i in range(0, len(a)):
           c = 1
@@ -10,14 +13,15 @@ def pickingNumbers(a):
                 if a[i] == a[j] or a[j]- a[i] == 1:
                       c+=1
           multiset.append(c)
-  
-    return max(multiset)
+          
+    print("Multiset with lengths of subarrays: ", multiset)
+    
+    return "Largest subarray lenght is :" + str(max(multiset))
   
 
 if __name__ == '__main__':
 
     n = int(input("n = ").strip())
-
     a = list(map(int, input().rstrip().split()))
     
     result = pickingNumbers(a)
