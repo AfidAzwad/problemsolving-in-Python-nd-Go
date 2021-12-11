@@ -1,4 +1,4 @@
-# Complete the 'countApplesAndOranges' function below.
+ # Complete the 'countApplesAndOranges' function below.
 #
 # The function accepts following parameters:
 #  1. INTEGER s
