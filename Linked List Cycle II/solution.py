@@ -39,7 +39,7 @@ def detectCycle(head):
 print(detectCycle(head))
 
 
-# Time Complexity : O(n)(first while loop)+O(n)(second while loop) = O(n)
+# Time Complexity : O(n)(first while loop)+O(n)(second while loop) = O(n)
 
 # Why It’s Not 𝑂(𝑛2):
 # Key Point: These loops are sequential, not nested. The second while loop runs after the first loop has finished.
