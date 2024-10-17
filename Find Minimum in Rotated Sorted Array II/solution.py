@@ -23,7 +23,7 @@ def findMinOptimized(nums):
 
         if nums[mid] > nums[R]:
             L = mid + 1
-        elif nums[mid] == nums[R] and nums[mid] == nums[L]:
+        elif nums[mid] == nums[R] == nums[L]:
             L += 1
             R -= 1
         else:
