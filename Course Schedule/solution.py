@@ -34,7 +34,7 @@ print(canFinish(numCourses,prerequisites))
 
 # Think courses as vertices or nodes of a graph and prerequisite is an edge.
 
-# approach is when there is no prerequisite then dfs returns True and after checking all
+# approach : DFS in Graph [ is when there is no prerequisite then dfs returns True and after checking all ]
 # prerequisite list will be empty so we can track if we can do all the courses or not at the end.
 
 # edge case : if there is a cycle found then it is impossible to complete the courses and return False
