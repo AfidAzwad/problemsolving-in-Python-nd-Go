@@ -1,22 +1,24 @@
 def isHappy(n):
-    if len(str(n)) == 1:
-        return False
     if n == 1:
         return True
 
-    def get_sum_of_squares(digits):
-        total = sum(int(digit) ** 2 for digit in str(digits))
-        return total
+    def get_sum_of_squares(n):
+        output = 0
+        while n:
+            digit = n % 10
+            output += digit ** 2
+            n = n // 10
+        return output
 
     seen = set()
 
-    while n != 1:
-        if n in seen:
-            return False
+    while n not in seen:
         seen.add(n)
         n = get_sum_of_squares(n)
+        if n == 1:
+            return True
 
-    return True
+    return False
 
 n = 2
 print(isHappy(n))
