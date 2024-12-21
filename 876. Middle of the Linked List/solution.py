@@ -26,11 +26,5 @@ def middleNode(head):
 print(middleNode(head))
 
 
-# Time Complexity : O(n)(first while loop)+O(n)(second while loop) = O(n)
-
-# Why It’s Not 𝑂(𝑛2):
-# Key Point: These loops are sequential, not nested. The second while loop runs after the first loop has finished.
-# Since they run one after the other, their time complexities are added rather than multiplied.
-
-
-# Space Complexity: O(1) — The algorithm uses only a constant amount of extra space
+# Time Complexity: O(n)
+# Space Complexity: O(1)
