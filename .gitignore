@@ -1,1 +1,8 @@
+# Byte-compiled files and directories
 __pycache__/
+
+# Virtual environment directories
+.env
+
+# IDE-specific files and directories
+.idea/
