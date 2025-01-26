@@ -4,7 +4,8 @@ def canJump(nums):
     for i in range(goal, -1, -1):
         if i + nums[i] >= goal:
             goal = i
-    return True if goal == 0 else False
+
+    return goal == 0
 
 # nums = [2,3,1,1,4]
 # nums = [0]
